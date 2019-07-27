@@ -1,13 +1,14 @@
+const productionDBConnection = process.env.DATABASE_URL || {
+  host: 'localhost',
+  database: 'trivializer',
+  user: 'test@example.com',
+  password: 'password'
+};
+
 module.exports = {
   knex: {
-    client: 'sqlite3',
-    useNullAsDefault: true,
-    connection: { filename: './data/db.sqlite3' },
-    pool: {
-      afterCreate: (conn, done) => {
-        // I believe this is necessary for cascading
-        conn.run('PRAGMA foreign_keys = ON', done);
-      }
-    }
+    client: 'pg',
+    connection: productionDBConnection
   }
 };
+
