@@ -2,7 +2,7 @@ const router = require('express').Router();
 const Messages = require('../models/messages');
 
 router.get('/', async (req, res) => {
-  const messages = await Messages.find();
+  const messages = await Messages.get();
 
   if (messages) {
     return res.status(200).json(messages);
@@ -17,3 +17,5 @@ router.post('/', async (req, res) => {
   const createdMessage = await Messages.insert(newMessage);
   return res.status(200).json(createdMessage);
 });
+
+module.exports = router;

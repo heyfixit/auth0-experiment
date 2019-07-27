@@ -17,5 +17,6 @@ const insert = async user =>
 module.exports = {
   get,
   getById,
-  insert
+  insert,
+  find
 };
