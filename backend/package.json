@@ -37,7 +37,7 @@
     "express-jwt": "^5.3.1",
     "helmet": "^3.16.0",
     "jwks-rsa": "^1.4.0",
-    "knex": "^0.16.5",
+    "knex": "^0.20.1",
     "knex-cleaner": "^1.1.4",
     "nodemailer": "^6.1.1",
     "pg": "^7.10.0",
